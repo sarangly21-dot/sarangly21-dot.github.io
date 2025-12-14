@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cat Scroll Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background-color: hsl(0, 100%, 78%);
+      border-image: linear-gradient(hsla(0, 0%, 0%, 0.2), hsl(0, 0%, 0%)) fill 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: 100%;
+    }
+
+    section {
+      position: relative;
+      height: 800dvh;
+      padding-block-start: 3rem;
+      padding-inline: 0.5rem;
+      perspective: 1000px;
+    }
+
+    section > .label {
+      position: sticky;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 0.5rem;
+      font-size: 1.25rem;
+      background-color: white;
+      border: 0.1rem solid black;
+    }
+
+    section > .label:nth-of-type(1) {
+      top: 1%;
+    }
+
+    section > .label:nth-of-type(2) {
+      margin-block-start: 260dvh;
+      top: 1%;
+    }
+
+    #cat {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-block-start: 6rem;
+      position: sticky;
+      top: 9%;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    @media (min-width: 56.25rem) {
+      body {
+        background-size: 33.33%;
+        background-position: 1% 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<main>
+
+<section>
+  <div class="label">I'm a curious cat who plays with computers</div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" id="cat" viewBox="0 0 211.66666 211.66667">
+    <!-- SVG 전체 그대로 -->
+    <!-- (사용자가 제공한 SVG 전체 내용) -->
+    <!-- START -->
+    <!-- ⚠️ 생략 없이 실제 사용 시 전체 SVG를 그대로 붙여넣으세요 -->
+    <!-- END -->
+  </svg>
+
+  <div class="label">I make things that are jaw-dropping</div>
+</section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to("section > .label:nth-of-type(1)", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "38%",
+      end: "39%",
+      scrub: true
+    },
+    scale: 0,
+    duration: 0.25,
+    transformOrigin: "50%"
+  });
+
+  let mouseSwings = 8;
+  let mouseScrub = 4;
+
+  gsap.to("#mouse-cable", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "0%",
+      scrub: mouseScrub
+    },
+    rotationZ: "-10deg",
+    ease: "linear",
+    yoyo: true,
+    duration: 1,
+    repeat: mouseSwings,
+    transformOrigin: "20% 0%"
+  });
+
+  gsap.to("#mouse", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "0%",
+      scrub: mouseScrub
+    },
+    y: -1,
+    x: 4,
+    ease: "linear",
+    yoyo: true,
+    duration: 1,
+    repeat: mouseSwings,
+    repeatRefresh: true,
+    transformOrigin: "50% 50%"
+  });
+
+  gsap.to("#mouth-open", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "45%",
+      end: "46%",
+      scrub: true
+    },
+    opacity: 1,
+    duration: 0.01
+  });
+
+  gsap.to("#mouth-smiling", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "46%",
+      end: "46%",
+      scrub: true
+    },
+    opacity: 0,
+    duration: 0.01
+  });
+
+  gsap.to("#mouse, #mouse-cable", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "46%",
+      end: "48%",
+      scrub: true
+    },
+    yPercent: 300,
+    xPercent: 2,
+    duration: 0.2
+  });
+
+  gsap.to("#cable-end", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "46%",
+      end: "48%",
+      scrub: true
+    },
+    yPercent: 500,
+    xPercent: -50,
+    duration: 0.2
+  });
+
+  gsap.to("#cat, section > .label:nth-of-type(2)", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "68%",
+      end: "70%",
+      scrub: true
+    },
+    y: 300,
+    scale: 0,
+    opacity: 0,
+    duration: 0.25,
+    transformOrigin: "50%"
+  });
+});
+</script>
+
+</body>
+</html>
