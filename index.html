@@ -1,99 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Cat Scroll Animation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-  <style>
-    body {
-      margin: 0;
-      display: grid;
-      place-items: center;
-      background-color: hsl(0, 100%, 78%);
-      border-image: linear-gradient(hsla(0, 0%, 0%, 0.2), hsl(0, 0%, 0%)) fill 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    main {
-      width: 100%;
-    }
-
-    section {
-      position: relative;
-      height: 800dvh;
-      padding-block-start: 3rem;
-      padding-inline: 0.5rem;
-      perspective: 1000px;
-    }
-
-    section > .label {
-      position: sticky;
-      width: fit-content;
-      margin: 0 auto;
-      padding: 0.5rem;
-      font-size: 1.25rem;
-      background-color: white;
-      border: 0.1rem solid black;
-    }
-
-    section > .label:nth-of-type(1) {
-      top: 1%;
-    }
-
-    section > .label:nth-of-type(2) {
-      margin-block-start: 260dvh;
-      top: 1%;
-    }
-
-    #cat {
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      margin-block-start: 6rem;
-      position: sticky;
-      top: 9%;
-    }
-
-    img,
-    svg {
-      display: block;
-    }
-
-    @media (min-width: 56.25rem) {
-      body {
-        background-size: 33.33%;
-        background-position: 1% 5%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-<main>
-
 <section>
   <div class="label">I'm a curious cat who plays with computers</div>
-
-  <svg xmlns="http://www.w3.org/2000/svg" id="cat" viewBox="0 0 211.66666 211.66667">
-    <!-- SVG 전체 그대로 -->
-    <!-- (사용자가 제공한 SVG 전체 내용) -->
-    <!-- START -->
-    <!-- ⚠️ 생략 없이 실제 사용 시 전체 SVG를 그대로 붙여넣으세요 -->
-    <!-- END -->
+  <svg xmlns="http://www.w3.org/2000/svg" id="cat" viewBox="0 0 211.66666 211.66667" version="1.1" xmlns:svg="http://www.w3.org/2000/svg">
+    <defs id="defs1" />
+    <path id="path20" fill="#1a1a1a" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-width="0.79375" d="M -8.5467879,95.329556 C 152.08899,90.946588 152.08899,90.946588 152.08899,90.946588" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path1" fill="#ffffff" stroke="none" stroke-width="0.264583" d="M 66.182825,16.655278 53.253066,55.225405 C 44.40098,62.604723 27.609598,79.249845 28.6453,97.537028 29.876976,119.28451 51.719026,144.63796 51.719026,144.63796 L 39.885011,198.11017 177.07192,197.89105 C 171.32341,184.14782 145.88912,142.17037 147.90036,141.23392 194.01446,119.763 191.809,88.169213 152.089,54.567967 153.41988,41.78431 137.53248,17.641887 137.53248,17.641887 L 131.10212,22.186569 117.6827,37.036093 101.02742,55.22541 91.384892,46.459475 73.611815,19.553732 Z" stroke-linecap="round" />
+    <path id="path2-5" fill="#dcb299" fill-opacity="1" stroke="none" stroke-width="0.264583" d="m 119.07741,50.322381 16.11598,-26.343429 10.53737,26.963277 c -7.98815,-0.97598 -17.03991,-4.926094 -26.65335,-0.619848 z" stroke-linecap="round" />
+    <path id="path3-2" fill="none" stroke="#000000" stroke-width="1.53586" d="m 54.063593,52.837722 c 4.101327,-13.721129 7.012318,-22.731577 10.5896,-36.606949 0.634582,-0.568932 1.08612,-1.857397 1.903748,-1.706815 4.463507,0.822059 11.70681,9.403991 13.119905,11.581903 18.255949,28.136778 20.778824,30.103865 0.345982,-0.293583 -2.19711,-3.268587 -8.542075,-10.934883 -13.8143,-11.622162 -0.894878,-0.116524 -1.338683,1.285479 -2.008007,1.92822 -3.556997,13.873166 -6.465509,22.876833 -10.586423,36.583745 -0.0904,0.337895 0.35919,0.473799 0.449251,0.135665 z" stroke-linecap="round" />
+    <ellipse id="path4" cx="90.914413" cy="90.123589" fill="#1a1a1a" stroke="none" stroke-width="0.832223" rx="6.4070759" ry="10.758291" stroke-linecap="round" />
+    <ellipse id="path5" cx="111.18561" cy="111.33011" fill="#dcb299" fill-opacity="1" stroke="none" stroke-width="0.663955" rx="6.3306413" ry="3.7983847" stroke-linecap="round" />
+    <path id="path9" fill="none" stroke="#000000" stroke-width="1.58266" d="m 49.245532,57.24203 c -36.974671,32.460965 -22.674359,66.45364 5.462449,84.19555" stroke-linecap="round" />
+    <path id="path9-2" fill="none" stroke="#000000" stroke-width="1.76471" d="m 157.26436,58.842496 c 46.06959,32.390836 28.25173,66.310064 -6.80608,84.013654" stroke-linecap="round" />
+    <path id="mouth-smiling" fill="none" fill-opacity="1" stroke="#000000" stroke-width="3.41855" d="m 85.813462,126.61382 c 14.130297,11.2052 17.357278,7.91218 26.261128,-6.72645 14.64972,18.9159 19.25913,10.50906 27.9019,2.48619" stroke-linecap="round" stroke-dasharray="none" opacity="1" display="inline" />
+    <ellipse id="path4-7" cx="128.11024" cy="89.628632" fill="#1a1a1a" stroke="none" stroke-width="0.832223" rx="6.4070759" ry="10.758291" stroke-linecap="round" />
+    <path id="path16" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.26613" d="m 8.7019685,100.52055 c 4.4969715,-1.193206 9.0059545,-2.341646 13.5120425,-3.501203 3.258026,-0.832113 6.496671,-1.736294 9.740757,-2.620405 0.307269,-0.148585 0.09709,-0.583154 -0.210125,-0.434559 v 0 c -3.237449,0.89562 -6.473194,1.797508 -9.72576,2.637216 -4.506342,1.164815 -9.016052,2.313993 -13.525834,3.464101 -0.3216245,0.14773 -0.1126954,0.60259 0.2089291,0.45485 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path17" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.26613" d="m 4.2749876,124.44279 c 3.8423192,-2.33128 8.0123644,-4.04299 12.1517684,-5.76233 4.47114,-1.93533 9.132786,-3.33615 13.872419,-4.42901 0.306216,-0.13523 0.114992,-0.56824 -0.191223,-0.43303 v 0 c -4.757325,1.10896 -9.435633,2.52501 -13.923436,4.47436 -4.170117,1.73205 -8.3713336,3.45361 -12.2517778,5.78509 -0.258027,0.242 0.084222,0.60692 0.3422494,0.36493 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path18" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.26613" d="m 175.69444,89.081912 c 6.42792,-0.458295 12.86126,-0.817144 19.29905,-1.101936 3.46152,-0.164951 6.92556,-0.310044 10.38804,-0.111786 0.69543,0.06015 1.39862,0.03589 2.08767,0.152462 0.3299,0.128343 0.51144,-0.33823 0.18155,-0.466574 v 0 c -0.70523,-0.130305 -1.42461,-0.105469 -2.13851,-0.162846 -3.54498,-0.189356 -7.09081,-0.01866 -10.6334,0.15519 -6.44584,0.294348 -12.88716,0.661993 -19.32741,1.0587 -0.33718,0.101163 -0.19415,0.577972 0.14303,0.476814 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path19" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.26613" d="m 176.32929,102.14181 c 0.71247,0.10509 1.07908,0.16864 1.85423,0.22874 0.64133,0.0498 1.28425,0.0763 1.92636,0.11456 0.94472,0.0606 1.89048,0.10686 2.83415,0.18204 2.7783,0.22142 4.56213,0.43604 7.35197,0.73893 5.72286,0.70519 11.40195,1.70411 17.07864,2.7042 0.30506,0.11786 0.47179,-0.31354 0.16672,-0.43145 v 0 c -5.6885,-0.98613 -11.37756,-1.97989 -17.10814,-2.69606 -2.6375,-0.28957 -4.72912,-0.53674 -7.36305,-0.75863 -0.943,-0.0794 -1.88812,-0.13131 -2.83218,-0.19692 -0.63463,-0.0402 -1.27003,-0.0696 -1.90384,-0.12102 -0.78485,-0.0635 -1.10212,-0.1214 -1.81383,-0.2295 -0.3289,-0.1351 -0.51989,0.33004 -0.19103,0.46509 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path3-2-7" fill="none" stroke="#000000" stroke-width="1.66915" d="m 154.7507,52.585562 c -4.86067,-13.674233 -8.31062,-22.653882 -12.55022,-36.481831 -0.75207,-0.566989 -1.28721,-1.851046 -2.25622,-1.700982 -5.28991,0.81925 -13.87428,9.371849 -15.549,11.542319 -21.63596,28.040611 -24.625937,30.000975 -0.41006,-0.292578 2.6039,-3.257418 10.12361,-10.897509 16.37196,-11.582444 1.06056,-0.11614 1.58654,1.281086 2.37978,1.921631 4.21556,13.825752 7.66258,22.798645 12.54646,36.458708 0.10714,0.336747 -0.42571,0.472172 -0.53243,0.135187 z" stroke-linecap="round" />
+    <path id="path21" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.58266" d="m 55.213215,146.93692 c -3.292428,10.3244 -5.918456,20.83509 -8.049805,31.45538 -1.13027,5.75594 -1.935212,11.56732 -2.717806,17.37834 -0.03876,0.34048 0.442838,0.39512 0.481494,0.0547 v 0 c 0.752714,-5.80603 1.549856,-11.60967 2.67691,-17.3573 2.122626,-10.60736 4.732876,-21.10892 8.061515,-31.40766 0.08724,-0.31986 -0.365028,-0.44322 -0.452313,-0.12347 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="path22" fill="none" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1.58266" d="m 150.81814,144.20809 c 3.77486,5.49946 7.12844,11.28003 10.30912,17.13837 3.40586,6.86444 6.22432,14.05813 8.03572,21.51513 0.90802,3.73803 1.11842,5.58542 1.6915,9.29723 0.13978,1.14409 0.27956,2.28818 0.41934,3.43227 0.0349,0.32828 0.49917,0.27894 0.46428,-0.0494 v 0 c -0.1439,-1.1477 -0.28779,-2.29541 -0.43169,-3.44311 -0.58066,-3.72114 -0.79841,-5.5922 -1.71156,-9.3394 -1.82358,-7.48315 -4.65406,-14.70265 -8.06189,-21.59745 -3.19197,-5.89727 -6.56428,-11.71026 -10.32194,-17.26844 -0.22257,-0.2778 -0.61546,0.0368 -0.39288,0.31478 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="cable-end" fill="#333333" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-width="1.26613" d="m 91.603621,131.85013 -12.089181,11.75022 5.505699,4.457 8.389642,-14.68186 z" stroke-linecap="round" stroke-dasharray="none" />
+    <path id="mouse-cable" fill="#333333" fill-opacity="1" stroke="none" stroke-opacity="1" stroke-width="1.26613" d="m 130.22714,132.08294 0.35754,31.72416 c 1.83334,1.26692 2.10122,0.18567 2.59541,-0.55616 -1.49995,-10.82906 0.16639,-20.83316 -0.72831,-31.72416 z" stroke-linecap="round" stroke-dasharray="none" />
+    <g id="mouse" stroke-opacity="1" transform="translate(-3.2005106,0.37653066)">
+      <path id="path82" fill="#313131" fill-opacity="1" stroke="none" stroke-width="1.26613" d="m 124.36006,197.11398 c -6.49261,-7.84478 -3.39817,-18.10669 -2.07421,-28.27068 2.5676,-3.10762 7.43308,-5.82935 12.33808,-6.85929 5.64579,0.0694 8.88664,3.67451 11.92884,6.08718 6.02046,8.21639 3.34893,16.6896 3.54704,26.72548 -7.66376,3.71196 -16.35695,5.72711 -25.73975,2.31731 z" stroke-linecap="round" stroke-dasharray="none" />
+      <path id="path84" fill="none" stroke="#4f4f4f" d="m 135.79094,162.84467 0.27742,14.24908 13.92383,-0.29309 m -12.95313,0.18957 -15.39406,0.16419 z" />
+    </g>
+    <path id="path2" fill="#dcb299" fill-opacity="1" stroke="none" stroke-width="0.264583" d="M 60.74484,52.06701 68.492909,24.793814 86.468425,49.277706 C 78.48028,48.301726 70.358288,47.760764 60.74484,52.06701 Z" stroke-linecap="round" />
+    <ellipse id="mouth-open" cx="110.877" cy="130.451" fill="#000000" stroke-width="1.02398" rx="25" ry="5" opacity="0" stroke-linecap="round" />
   </svg>
-
   <div class="label">I make things that are jaw-dropping</div>
 </section>
 
-</main>
+section {
+  position: relative;
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+  height: 800dvh;
+  padding-block-start: 3rem;
+  padding-inline: 0.5rem;
+
+  perspective: 1000px;
+
+  > .label {
+    position: sticky;
+
+    &:nth-of-type(1) {
+      top: 1%;
+    }
+
+    &:nth-of-type(2) {
+      margin-block-start: 260dvh;
+      top: 1%;
+    }
+  }
+}
+
+.label {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem;
+
+  font-size: 1.25rem;
+
+  background-color: white;
+
+  border: 0.1rem solid black;
+}
+
+#cat {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-block-start: 6rem;
+
+  position: sticky;
+  top: 9%;
+}
+
+img,
+svg {
+  display: block;
+}
+
+body {
+  margin: 0;
+
+  display: grid;
+  place-items: center;
+
+  background-color: hsl(0, 100%, 78%);
+
+  border-image: linear-gradient(hsla(0, 0%, 0%, 0.2), hsl(0, 0%, 0%)) fill 0;
+}
+
+@media (min-width: 56.25rem) {
+  body {
+    background-size: 33.33%;
+    background-position: 1% 5%;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to("section > .label:nth-of-type(1)", {
@@ -103,8 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
       end: "39%",
       scrub: true
     },
+    duration: 1,
     scale: 0,
     duration: 0.25,
+
     transformOrigin: "50%"
   });
 
@@ -122,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yoyo: true,
     duration: 1,
     repeat: mouseSwings,
+
     transformOrigin: "20% 0%"
   });
 
@@ -149,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true
     },
     opacity: 1,
+    ease: "linear",
     duration: 0.01
   });
 
@@ -160,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: true
     },
     opacity: 0,
+    ease: "linear",
     duration: 0.01
   });
 
@@ -172,6 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     yPercent: 300,
     xPercent: 2,
+    ease: "linear",
     duration: 0.2
   });
 
@@ -184,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     yPercent: 500,
     xPercent: -50,
+    ease: "linear",
     duration: 0.2
   });
 
@@ -194,14 +211,23 @@ document.addEventListener("DOMContentLoaded", () => {
       end: "70%",
       scrub: true
     },
+    duration: 1,
     y: 300,
-    scale: 0,
     opacity: 0,
     duration: 0.25,
     transformOrigin: "50%"
   });
-});
-</script>
 
-</body>
-</html>
+  gsap.to("#cat, section > .label:nth-of-type(2)", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "68%",
+      end: "70%",
+      scrub: true
+    },
+    duration: 1,
+    scale: 0,
+    duration: 0.25,
+    transformOrigin: "50%"
+  });
+});
